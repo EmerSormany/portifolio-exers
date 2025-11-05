@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays - Lab 05</title>
+</head>
+
+<body>
+    <div id="main" class="h-screen flex items-center justify-center flex-col">
+
+
+        <div class="bg-gray-300 shadow-md rounded px-8 pt-6 pb-8 mb-4 w-1/2 h-5/6">
+            <h1 class="text-xl font-extrabold leading-normal my-10 ">Lab 05</h1>
+
+            <div class="mb-4 ">
+
+                <div class="flex items-center justify-center ">
+
+                    <input class="w-full py-2 px-4 text-gray-700  focus:outline-none focus:shadow-outline" type="text"
+                        name="elemento" id="elemento" list="emocoes" placeholder="Digite um valor">
+
+                    <input type="button" class="bg-blue-500 :bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+                        value="Push" onclick="handlerPush(document.getElementById('elemento').value)"
+                    >
+
+
+                    <datalist id="emocoes">
+                        <option value="1">
+                        <option value="2">
+                        <option value="3">
+                        <option value="4">
+                        <option value="5">
+                    </datalist>
+
+                    
+                    
+                </div>
+
+                <div class="flex items-center justify-center " style="margin: 10px;">
+                    <input class="w-full py-2 px-4 text-gray-700  focus:outline-none focus:shadow-outline" type="text"
+                        name="elemento" id="elemento_buscado" list="emocoes" placeholder="Digite um valor">
+                        
+                    <input type="button" class="bg-blue-500 :bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+                        value="Pesquisar" onclick="handlerPesquisa(document.getElementById('elemento_buscado').value, true)">
+
+                    <input type="button" class="bg-blue-500 :bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+                        value="Pesquisa Binária" onclick="handlerPesquisa(document.getElementById('elemento_buscado').value, false)">
+                </div>
+
+                <div class="flex items-center justify-center " style="margin: 10px;">
+                    <input type="button" class="bg-blue-500 :bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+                        value="Sort" onclick="handlerSort()">
+                </div>
+            </div>
+            
+            <p class="mt-10 "> Veja os dados do seu array </p>
+            <div id="meuArray" class="bg-sky-700 shadow-md rounded p-2 m-4 h-20 mx-10 flex justify-start">
+            </div>
+            <p id="resultado_pesquisa"></p>
+        </div>
+
+
+
+    </div>
+    <script src="script.js"></script>/>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+
+</html>
