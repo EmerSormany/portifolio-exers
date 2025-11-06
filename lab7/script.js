@@ -5,11 +5,6 @@ function calcularOperacoes(event) {
     const num1 = parseFloat(document.getElementById('numero1').value);
     const num2 = parseFloat(document.getElementById('numero2').value);
 
-    if (isNaN(num1) || isNaN(num2)) {
-        document.getElementById('resultado').innerHTML = '<p style="color: red;">🚨 Por favor, insira dois números válidos.</p>';
-        return;
-    }
-
     const soma = num1 + num2;
     const subtracao = num1 - num2;
     const multiplicacao = num1 * num2;

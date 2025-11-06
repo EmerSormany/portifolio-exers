@@ -1,0 +1,95 @@
+/* PASSO 1: O Corpo da Página
+  Define o fundo da página (cinza suave) e usa flexbox
+  para centralizar o nosso card-pai vertical e horizontalmente.
+*/
+body.questao-body {
+  background-color: #f0f4f8; /* Um cinza bem claro */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #333;
+  
+  /* Mágica da Centralização */
+  min-height: 100vh; /* Garante que a página ocupe 100% da altura */
+  display: flex;
+  align-items: center;    /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  padding: 16px; /* Garante que o card não cole nas bordas em telas pequenas */
+}
+
+/* PASSO 2: O Card-Pai Único (A "Casca")
+  Este é o único elemento que o usuário verá. 
+  Ele tem a borda suave e arredondada que você pediu.
+*/
+main.card-unico {
+  background-color: #ffffff; /* Fundo branco */
+  border: 1px solid #d1d5db; /* Borda cinza suave */
+  border-radius: 12px;      /* Borda levemente arredondada */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra leve */
+  
+  padding: 24px 28px; /* Espaçamento interno */
+  
+  /* Responsividade */
+  width: 100%;        /* Ocupa 100% em telas pequenas */
+  max-width: 600px; /* Trava em uma largura máxima em desktops */
+  
+  /* Garante que o padding seja calculado corretamente */
+  box-sizing: border-box; 
+}
+
+/* PASSO 3: Estilização Bônus (Formulários)
+  Para seus formulários não ficarem "crus".
+  Isso vai estilizar inputs, botões e labels.
+*/
+
+/* Títulos dentro do card (ex: "Informe dois números:") */
+.card-unico h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+  color: #111827;
+}
+
+/* Labels (ex: "Primeiro Número:") */
+.card-unico label {
+  display: block; /* Faz o label ocupar a própria linha */
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Inputs de texto, número, etc. */
+.card-unico input[type="text"],
+.card-unico input[type="number"],
+.card-unico input[type="password"],
+.card-unico textarea,
+.card-unico select {
+  width: 100%; /* Ocupa 100% da largura do card */
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  box-sizing: border-box; /* Garante que o padding não quebre o layout */
+  margin-bottom: 16px; /* Espaço abaixo de cada input */
+  font-size: 1rem;
+}
+
+/* Botão de envio (Submit) */
+.card-unico button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb; /* Azul */
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.card-unico button[type="submit"]:hover {
+  background-color: #1d4ed8; /* Azul mais escuro */
+}
+
+/* Estilos para o resultado (listas, parágrafos) */
+#resultado ul, #resultado ol {
+  padding-left: 20px;
+}
