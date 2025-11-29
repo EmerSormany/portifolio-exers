@@ -12,6 +12,10 @@ body {
     padding: 20px;
 }
 
+body h2 {
+    text-align: center;
+}
+
 .page-description {
     max-width: 1000px;
     margin: 20px auto;
