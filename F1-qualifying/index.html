@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qualificação F1 - Estrutura de Dados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Simulador de Qualificação F1</h1>
+    
+    <div class="main-container">
+        
+        <div class="track-container">
+            <canvas id="raceTrack" width="600" height="400"></canvas>
+        </div>
+        
+        <div class="sidebar">
+            <div class="controls">
+                <button id="startBtn" onclick="startQualifying()">Iniciar Sessão</button>
+                <div class="status-display" id="statusText">Aguardando início...</div>
+                <div class="current-lap-time" id="timerText">00.000</div>
+            </div>
+            
+            <div class="leaderboard">
+                <h2>Grid de Largada (Fila de Prioridade)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pos</th>
+                            <th>Carro</th>
+                            <th>Melhor Tempo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboardBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+
+</body>
+</html>
